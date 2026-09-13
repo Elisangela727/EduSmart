@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import classification_report
 dados = pd.read_csv("machine_learning/dados_teste.csv")
 X = dados[["media_notas", "frequencia"]]
 y = dados["risco"]
@@ -17,3 +18,6 @@ print("Média das notas:", novo_aluno["media_notas"][0])
 print("Frequência:", novo_aluno["frequencia"][0], "%")
 print("Nível de risco:", resultado[0])
 print("Acurácia do modelo:", acuracia)
+previsoes = modelo.predict(X_teste)
+relatorio = classification_report(y_teste, previsoes)
+print(relatorio)
