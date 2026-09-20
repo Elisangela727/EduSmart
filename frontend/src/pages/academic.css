@@ -1,0 +1,152 @@
+.academic-page {
+    width: min(100% - 48px, 1400px);
+    margin: 0 auto;
+    padding: 42px 0 70px;
+}
+
+.academic-page h1 {
+    margin: 0;
+    color: #17243a;
+    font-size: clamp(30px, 4vw, 40px);
+    letter-spacing: -0.03em;
+}
+
+.academic-subtitle {
+    margin: 9px 0 30px;
+    color: #718096;
+}
+
+.academic-panel,
+.analysis-card {
+    border: 1px solid #e1e7f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(30, 51, 83, 0.04);
+}
+
+.academic-table-wrapper {
+    overflow-x: auto;
+}
+
+.academic-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.academic-table th,
+.academic-table td {
+    padding: 18px 22px;
+    border-bottom: 1px solid #edf0f5;
+    text-align: left;
+}
+
+.academic-table th {
+    background: #fbfcfe;
+    color: #8491a5;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.academic-table td {
+    color: #536176;
+    font-size: 14px;
+}
+
+.academic-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.academic-table td strong {
+    color: #17243a;
+}
+
+.academic-loading,
+.academic-empty {
+    padding: 50px 22px;
+    color: #8a96a8;
+    text-align: center;
+}
+
+.academic-error {
+    margin-bottom: 22px;
+    padding: 15px 18px;
+    border: 1px solid #efc5c5;
+    border-radius: 10px;
+    background: #fff6f6;
+    color: #a52a2a;
+}
+
+.analysis-list {
+    display: grid;
+    gap: 14px;
+}
+
+.analysis-card {
+    padding: 20px 22px;
+}
+
+.analysis-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.analysis-header strong {
+    color: #263750;
+    text-transform: capitalize;
+}
+
+.analysis-header span {
+    color: #98a2b3;
+    font-size: 12px;
+}
+
+.analysis-card p {
+    margin: 13px 0 0;
+    color: #536176;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.academic-read {
+    opacity: 0.65;
+}
+
+.academic-action {
+    margin-top: 15px;
+    padding: 9px 13px;
+    border: 0;
+    border-radius: 8px;
+    background: #edf3fb;
+    color: #2766b7;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.academic-action:hover {
+    background: #e1ebf8;
+}
+
+.risco-baixo {
+    color: #21875a !important;
+}
+
+.risco-medio {
+    color: #b7791f !important;
+}
+
+.risco-alto {
+    color: #c63f3f !important;
+}
+
+.risco-neutro {
+    color: #718096 !important;
+}
+
+@media (max-width: 800px) {
+    .academic-page {
+        width: min(100% - 28px, 1400px);
+        padding: 30px 0 95px;
+    }
+}

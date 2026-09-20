@@ -1,23 +1,26 @@
+import os
+
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import classification_report
-dados = pd.read_csv("machine_learning/dados_teste.csv")
+
+CAMINHO_ATUAL = os.path.dirname(os.path.abspath(__file__))
+CAMINHO_DADOS = os.path.join(CAMINHO_ATUAL, "dados_teste.csv")
+
+dados = pd.read_csv(CAMINHO_DADOS)
+
 X = dados[["media_notas", "frequencia"]]
 y = dados["risco"]
-X_treino, X_teste, y_treino, y_teste = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
-modelo = DecisionTreeClassifier()
-modelo.fit(X_treino, y_treino)
-acuracia = modelo.score(X_teste, y_teste)
-novo_aluno = pd.DataFrame([[4.0, 65]], columns=["media_notas", "frequencia"])
-resultado = modelo.predict(novo_aluno)
-print("=== Análise do aluno ===")
-print("Média das notas:", novo_aluno["media_notas"][0])
-print("Frequência:", novo_aluno["frequencia"][0], "%")
-print("Nível de risco:", resultado[0])
-print("Acurácia do modelo:", acuracia)
-previsoes = modelo.predict(X_teste)
-relatorio = classification_report(y_teste, previsoes)
-print(relatorio)
+
+modelo = DecisionTreeClassifier(random_state=42)
+modelo.fit(X, y)
+
+
+def prever_risco(media_notas, frequencia):
+    novo_aluno = pd.DataFrame(
+        [[media_notas, frequencia]],
+        columns=["media_notas", "frequencia"]
+    )
+
+    resultado = modelo.predict(novo_aluno)[0]
+
+    return resultado.upper()

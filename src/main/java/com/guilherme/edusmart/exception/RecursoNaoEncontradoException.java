@@ -1,0 +1,8 @@
+package com.guilherme.edusmart.exception;
+
+public class RecursoNaoEncontradoException extends RuntimeException {
+
+    public RecursoNaoEncontradoException(String mensagem) {
+        super(mensagem);
+    }
+}

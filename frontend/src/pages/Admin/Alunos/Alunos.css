@@ -1,0 +1,445 @@
+.admin-alunos-page {
+    width: 100%;
+}
+
+.admin-alunos-header {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.admin-alunos-header h1 {
+    margin: 0;
+    color: #17243a;
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: -0.03em;
+}
+
+.admin-alunos-header p {
+    margin: 8px 0 0;
+    color: #718096;
+}
+
+.admin-primary-button,
+.admin-secondary-button {
+    min-height: 43px;
+    padding: 0 18px;
+    border-radius: 9px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+            opacity 0.15s ease,
+            transform 0.15s ease;
+}
+
+.admin-primary-button {
+    border: 1px solid #173d74;
+    background: #173d74;
+    color: #ffffff;
+}
+
+.admin-primary-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.admin-secondary-button {
+    border: 1px solid #dce3ed;
+    background: #ffffff;
+    color: #536176;
+}
+
+.admin-primary-button:disabled,
+.admin-secondary-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.admin-alunos-panel {
+    overflow: hidden;
+    border: 1px solid #e1e7f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(30, 51, 83, 0.04);
+}
+
+.admin-alunos-toolbar {
+    padding: 22px 24px;
+    border-bottom: 1px solid #e8edf4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.admin-alunos-toolbar h2 {
+    margin: 0;
+    color: #263750;
+    font-size: 18px;
+}
+
+.admin-alunos-toolbar p {
+    margin: 5px 0 0;
+    color: #98a2b3;
+    font-size: 12px;
+}
+
+.admin-search-field {
+    width: min(100%, 390px);
+}
+
+.admin-search-field input {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    border: 1px solid #dce3ed;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #263750;
+}
+
+.admin-search-field input:focus {
+    border-color: #3975c6;
+    box-shadow: 0 0 0 3px rgba(57, 117, 198, 0.1);
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 17px 24px;
+    border-bottom: 1px solid #edf0f5;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.admin-table th {
+    background: #fafbfd;
+    color: #718096;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.admin-table td {
+    color: #536176;
+    font-size: 13px;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.admin-table tbody tr:hover {
+    background: #fbfcfe;
+}
+
+.admin-student-cell {
+    min-width: 230px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-student-avatar {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #edf3fb;
+    color: #3975c6;
+    font-weight: 800;
+}
+
+.admin-student-cell strong,
+.admin-student-cell span {
+    display: block;
+}
+
+.admin-student-cell strong {
+    color: #263750;
+    font-size: 13px;
+}
+
+.admin-student-cell span {
+    margin-top: 3px;
+    color: #98a2b3;
+    font-size: 11px;
+}
+
+.admin-matricula-badge {
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #f1f5f9;
+    color: #536176;
+    font-weight: 700;
+}
+
+.admin-alunos-loading,
+.admin-alunos-empty {
+    min-height: 260px;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 10px;
+    text-align: center;
+    color: #8491a5;
+}
+
+.admin-alunos-empty strong {
+    color: #536176;
+}
+
+.admin-alunos-empty p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.admin-alunos-message {
+    margin-bottom: 20px;
+    padding: 14px 17px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.admin-alunos-error,
+.admin-form-error {
+    border: 1px solid #efc5c5;
+    background: #fff6f6;
+    color: #a52a2a;
+}
+
+.admin-alunos-success {
+    border: 1px solid #c8e6d1;
+    background: #f4fbf6;
+    color: #26743b;
+}
+
+.admin-alunos-message button {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.admin-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    padding: 30px 18px;
+    display: grid;
+    place-items: center;
+    overflow-y: auto;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.admin-modal {
+    width: min(100%, 720px);
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 24px 70px rgba(15, 23, 42, 0.22);
+}
+
+.admin-modal-header {
+    padding: 24px 26px;
+    border-bottom: 1px solid #e8edf4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.admin-modal-header h2 {
+    margin: 0;
+    color: #17243a;
+    font-size: 23px;
+}
+
+.admin-modal-header p {
+    margin: 6px 0 0;
+    color: #8491a5;
+    font-size: 13px;
+}
+
+.admin-modal-close {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #718096;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.admin-student-form {
+    padding: 26px;
+}
+
+.admin-form-section + .admin-form-section {
+    margin-top: 28px;
+}
+
+.admin-form-section-heading {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.admin-form-section-heading > span {
+    width: 31px;
+    height: 31px;
+    flex: 0 0 31px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: #edf3fb;
+    color: #3975c6;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.admin-form-section-heading strong {
+    display: block;
+    color: #263750;
+    font-size: 14px;
+}
+
+.admin-form-section-heading p {
+    margin: 3px 0 0;
+    color: #98a2b3;
+    font-size: 12px;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.admin-form-full {
+    grid-column: 1 / -1;
+}
+
+.admin-form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #536176;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.admin-form-group > input,
+.admin-password-field input {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    border: 1px solid #dce3ed;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: #263750;
+}
+
+.admin-form-group > input:focus,
+.admin-password-field input:focus {
+    border-color: #3975c6;
+    box-shadow: 0 0 0 3px rgba(57, 117, 198, 0.1);
+}
+
+.admin-password-field {
+    position: relative;
+}
+
+.admin-password-field input {
+    padding-right: 78px;
+}
+
+.admin-password-field button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border: 0;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #3975c6;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.admin-form-error {
+    margin-top: 22px;
+    padding: 12px 14px;
+    border-radius: 9px;
+    font-size: 12px;
+}
+
+.admin-form-actions {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #e8edf4;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+@media (max-width: 700px) {
+    .admin-alunos-header,
+    .admin-alunos-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-primary-button {
+        width: 100%;
+    }
+
+    .admin-search-field {
+        width: 100%;
+    }
+
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form-full {
+        grid-column: auto;
+    }
+
+    .admin-modal-backdrop {
+        padding: 12px;
+    }
+
+    .admin-modal {
+        max-height: calc(100vh - 24px);
+    }
+
+    .admin-modal-header,
+    .admin-student-form {
+        padding: 20px;
+    }
+}
