@@ -1,0 +1,228 @@
+.admin-dashboard-welcome {
+    margin-bottom: 30px;
+}
+
+.admin-section-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #3975c6;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.admin-dashboard-welcome h1 {
+    margin: 0;
+    color: #17243a;
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: -0.03em;
+}
+
+.admin-dashboard-welcome p {
+    margin: 9px 0 0;
+    color: #718096;
+}
+
+.admin-stat-grid {
+    margin-bottom: 26px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.admin-stat-card {
+    padding: 22px;
+    border: 1px solid #e1e7f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(30, 51, 83, 0.04);
+}
+
+.admin-stat-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.admin-stat-heading > span {
+    color: #718096;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.admin-stat-icon,
+.admin-action-icon {
+    display: grid;
+    place-items: center;
+    background: #edf3fb;
+    color: #3975c6;
+    font-weight: 800;
+}
+
+.admin-stat-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    font-size: 12px;
+}
+
+.admin-stat-card > strong {
+    display: block;
+    margin-top: 16px;
+    color: #17243a;
+    font-size: 31px;
+    line-height: 1;
+}
+
+.admin-stat-card > p {
+    margin: 10px 0 0;
+    color: #98a2b3;
+    font-size: 12px;
+}
+
+.admin-actions-panel {
+    padding: 25px;
+    border: 1px solid #e1e7f0;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 30px rgba(30, 51, 83, 0.04);
+}
+
+.admin-actions-heading h2 {
+    margin: 0;
+    color: #17243a;
+    font-size: 22px;
+}
+
+.admin-actions-heading p {
+    margin: 7px 0 0;
+    color: #8491a5;
+    font-size: 14px;
+}
+
+.admin-actions-grid {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.admin-action-card {
+    padding: 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: inherit;
+    text-decoration: none;
+    transition:
+            transform 0.15s ease,
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
+}
+
+.admin-action-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd9ec;
+    box-shadow: 0 8px 22px rgba(30, 51, 83, 0.07);
+}
+
+.admin-action-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 10px;
+}
+
+.admin-action-card > div:nth-child(2) {
+    flex: 1;
+}
+
+.admin-action-card strong,
+.admin-action-card span {
+    display: block;
+}
+
+.admin-action-card strong {
+    color: #263750;
+    font-size: 14px;
+}
+
+.admin-action-card span {
+    margin-top: 4px;
+    color: #8a96a8;
+    font-size: 12px;
+}
+
+.admin-action-card b {
+    color: #3975c6;
+    font-size: 18px;
+}
+
+.admin-dashboard-error {
+    margin-bottom: 24px;
+    padding: 16px 18px;
+    border: 1px solid #efc5c5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #fff6f6;
+    color: #a52a2a;
+}
+
+.admin-dashboard-error p {
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+
+.admin-dashboard-error button {
+    padding: 9px 13px;
+    border: 1px solid #e7b7b7;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #a52a2a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.admin-dashboard-loading {
+    min-height: 60vh;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 16px;
+    color: #718096;
+}
+
+.admin-dashboard-spinner {
+    width: 38px;
+    height: 38px;
+    border: 4px solid #dce6f3;
+    border-top-color: #3975c6;
+    border-radius: 50%;
+    animation: admin-spin 0.8s linear infinite;
+}
+
+@keyframes admin-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1200px) {
+    .admin-stat-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .admin-stat-grid,
+    .admin-actions-grid {
+        grid-template-columns: 1fr;
+    }
+}
